@@ -148,6 +148,21 @@ fun ListUsageRoot(
                     )
                 }
             }
+            Box(
+                modifier = Modifier
+                    .padding(0.dp, 0.dp, 0.dp, 10.dp)
+                    .clip(RoundedCornerShape(15.dp))
+                    .clickable {
+                        vm.updateData()
+                    }
+                    .linearGradient(listOf(Color(160, 160, 250), Color(0, 140, 140)))
+                    .fillMaxWidth(0.6f)
+                    .height(60.dp),
+                contentAlignment = Alignment.Center
+            )
+            {
+                Text("Обновить", color = Color(255, 255, 200))
+            }
         }
     }
 }
