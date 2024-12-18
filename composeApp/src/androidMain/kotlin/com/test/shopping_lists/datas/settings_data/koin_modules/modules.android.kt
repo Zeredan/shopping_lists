@@ -1,0 +1,15 @@
+package com.test.shopping_lists.datas.settings_data.koin_modules
+
+import android.content.Context
+import com.test.shopping_lists.datas.settings_data.DATA_STORE_PATH
+import org.koin.core.module.Module
+import org.koin.core.qualifier.named
+import org.koin.dsl.module
+
+actual val settingsDataPlatformModule: Module
+    get() = module{
+        single<String>(named("pref_path")){
+            val context: Context = get()
+            context.filesDir.resolve(DATA_STORE_PATH).absolutePath
+        }
+    }

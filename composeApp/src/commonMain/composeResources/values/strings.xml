@@ -1,0 +1,5 @@
+<resources>
+    <string name="lists_usage">lists_usage_feature</string>
+    <string name="keys_management">lists_management_feature</string>
+    <string name="settings">settings</string>
+</resources>
